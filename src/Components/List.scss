@@ -1,0 +1,46 @@
+.list {
+	width: 100%;
+	margin-bottom: 3vw ;
+	position: relative;
+	bottom: 175px;
+
+	.listTitle {
+		color: white;
+		font-size: 1rem;
+		font-weight: 600;
+		margin-left: 50px;
+	}
+
+	.wrapper {
+		position: relative;
+
+		.sliderArrow {
+			width: 2rem;
+			height: 100%;
+			color: white;
+			position: absolute;
+			z-index: 99;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			cursor: pointer;
+
+			&.left {
+				left: 0;
+			}
+
+			&.right {
+				right: 0;
+			}
+		}
+		.container {
+			margin: 0;
+    		padding: 0 4%;
+			display: flex;
+			width: max-content;
+			margin-top: 10px;
+			transform: translateX(0px);
+			transition: all 1s ease;
+		}
+	}
+}
