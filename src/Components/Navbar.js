@@ -7,9 +7,8 @@ const Navbar = () => {
 	const eventTrack = (category, action, label) => {
 		console.log("GA event:", category, ":", action, ":", label);
 		ReactGA.event({
-		  category: category,
-		  action: action,
-		  label: label,
+		  category: click,
+		  action: clicked,
 		})
 	  }
 
@@ -38,6 +37,7 @@ const Navbar = () => {
 					<Search className="icon" />
 					<Notifications onClick={eventTrack.bind(this, "Notifications clicked")} className="icon" />
 					<img
+						onClick={eventTrack.bind(this, "Icon clicked")}
 						src="https://i.imgur.com/Uf1Qu73.png"
 						alt="Taylor Swift Profile Icon"
 					/>
