@@ -1,8 +1,18 @@
 import { useState } from "react";
+import ReactGA from 'react-ga';
 import { ArrowDropDown, Notifications, Search } from "@material-ui/icons";
 import "./Navbar.scss";
 
 const Navbar = () => {
+	const eventTrack = (category, action, label) => {
+		console.log("GA event:", category, ":", action, ":", label);
+		ReactGA.event({
+		  category: category,
+		  action: action,
+		  label: label,
+		})
+	  }
+
 	const [isScrolled, setIsScrolled] = useState(false);
 
 	window.onscroll = () => {
@@ -26,7 +36,7 @@ const Navbar = () => {
 				</div>
 				<div className="sec-nav">
 					<Search className="icon" />
-					<Notifications className="icon" />
+					<Notifications onClick={eventTrack.bind(this, "Notifications clicked")} className="icon" />
 					<img
 						src="https://i.imgur.com/Uf1Qu73.png"
 						alt="Taylor Swift Profile Icon"

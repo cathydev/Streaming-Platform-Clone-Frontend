@@ -3,6 +3,8 @@ import {
 	ArrowForwardIosOutlined,
 } from "@material-ui/icons";
 import { useRef, useState } from "react";
+import Carousel from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 import ListItem from "./ListItem";
 import "./List.scss";
 
@@ -27,7 +29,13 @@ function List() {
 	};
 	return (
 		<div className="list">
-			<span className="listTitle">Trending Now</span>
+			<Carousel>
+				<ListItem index={0} />
+				<ListItem index={1} />
+				<ListItem index={2} />
+				<ListItem index={3} />
+			</Carousel>
+			 <span className="listTitle">Trending Now</span>
 			<div className="wrapper">
 				<ArrowBackIosOutlined
 					className="sliderArrow left"
@@ -50,7 +58,7 @@ function List() {
 					className="sliderArrow right"
 					onClick={() => handleClick("right")}
 				/>
-			</div>
+			</div> 
 		</div>
 	);
 }
