@@ -1,9 +1,12 @@
 import { useState } from "react";
 import ReactGA from 'react-ga';
+import { useTracking } from "react-tracking";
 import { ArrowDropDown, Notifications, Search } from "@material-ui/icons";
 import "./Navbar.scss";
 
 const Navbar = () => {
+	const { trackEvent } = useTracking();
+
 	const eventTrack = (category, action, label) => {
 		console.log("GA event:", category, ":", action, ":", label);
 		ReactGA.event({
@@ -28,7 +31,7 @@ const Navbar = () => {
 						src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
 						width="95" height="25" alt="Netflix logo"
 					/>
-					<span className="active">Home</span>
+					<span className="active" onClick={() => trackEvent({ event: "react-tracking usage" })}>Home</span>
 					<span>TV Shows</span>
 					<span>Movies</span>
 					<span>New & Popular</span>
