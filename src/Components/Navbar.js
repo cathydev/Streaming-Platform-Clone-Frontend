@@ -7,8 +7,9 @@ const Navbar = () => {
 	const eventTrack = (category, action, label) => {
 		console.log("GA event:", category, ":", action, ":", label);
 		ReactGA.event({
-		  category: click,
-		  action: clicked,
+		  category: category,
+		  action: action,
+		  label: label,
 		})
 	  }
 
