@@ -4,6 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { MatomoProvider, createInstance } from '@datapunt/matomo-tracker-react'
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+    gtmId: 'GTM-P9H3XVL',
+ events: {
+        sendUserInfo: 'userInfo'
+    }
+}
+}
+
+TagManager.initialize(tagManagerArgs)
 
 const instance = createInstance({
   urlBase: 'https://LINK.TO.DOMAIN',
