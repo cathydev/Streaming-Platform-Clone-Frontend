@@ -12,7 +12,6 @@ const tagManagerArgs = {
         sendUserInfo: 'userInfo'
     }
 }
-}
 
 TagManager.initialize(tagManagerArgs)
 

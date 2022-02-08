@@ -5,7 +5,7 @@ import ReactGA from 'react-ga';
 import { useMatomo } from '@datapunt/matomo-tracker-react'
 
 function App() {
-const { trackPageView, trackEvent } = useMatomo()
+const { trackPageView } = useMatomo()
 
   // Track page view
 useEffect(() => {
