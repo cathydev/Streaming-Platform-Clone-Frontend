@@ -2,16 +2,17 @@ import React, {useEffect}  from "react";
 import './App.scss';
 import Home from './pages/Home';
 import ReactGA from 'react-ga';
-import { useMatomo } from '@datapunt/matomo-tracker-react'
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+    gtmId: 'GTM-PHGVV3L',
+events: {
+        sendUserInfo: 'userInfo'
+    }
+}
+TagManager.initialize(tagManagerArgs)
 
 function App() {
-const { trackPageView } = useMatomo()
-
-  // Track page view
-useEffect(() => {
-    trackPageView()
-  }, [])
-
   useEffect(() => {
     ReactGA.initialize("UA-157390602-1");
     ReactGA.pageview('../pages/Home');

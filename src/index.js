@@ -7,7 +7,7 @@ import { MatomoProvider, createInstance } from '@datapunt/matomo-tracker-react'
 import TagManager from 'react-gtm-module'
 
 const tagManagerArgs = {
-    gtmId: 'GTM-P9H3XVL',
+    gtmId: 'GTM-PHGVV3L',
  events: {
         sendUserInfo: 'userInfo'
     }
