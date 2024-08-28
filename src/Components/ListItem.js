@@ -1,10 +1,5 @@
 import "./ListItem.scss";
-import {
-  PlayArrow,
-  Add,
-  ThumbUpAltOutlined,
-  ThumbDownOutlined,
-} from "@material-ui/icons";
+import {PlayArrow, Add, ThumbUpAltOutlined, ThumbDownOutlined} from "@mui/icons-material";
 import { useState } from "react";
 
 function ListItem({ index }) {
