@@ -16,7 +16,7 @@ const Navbar = () => {
 				<div className="main-nav">
 					<img
 						src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
-						width="95" height="25" alt="Netflix logo"
+						width="95" height="25" alt="logo"
 					/>
 					<span className="active">Home</span>
 					<span>TV Shows</span>

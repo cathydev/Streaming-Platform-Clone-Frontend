@@ -1,6 +1,6 @@
-# Netflix Clone
+# Streaming platform Clone
 
-Clone of Netflix Homepage with React, SASS and Material-UI
+Clone of a streaming platform Homepage with React, SASS and Material-UI
 
 ![demo img](web.png)
 
