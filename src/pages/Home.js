@@ -1,7 +1,7 @@
 import "./Home.scss";
-import Navbar from "../Components/Navbar";
-import Featured from "../Components/Featured";
-import List from "../Components/List";
+import Navbar from "../Components/Navbar/Navbar";
+import Featured from "../Components/Featured/Featured";
+import List from "../Components/List/List";
 
 function Home() {
 	return (

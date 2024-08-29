@@ -1,6 +1,6 @@
 import { InfoOutlined, PlayArrow } from "@mui/icons-material";
 import "./Featured.scss";
-import logo from '../images/logo.png';
+import logo from '../../images/logo.png';
 
 function Featured({ type }) {
 	return (
