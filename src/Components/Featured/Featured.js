@@ -1,6 +1,5 @@
 import { InfoOutlined, PlayArrow } from "@mui/icons-material";
 import "./Featured.scss";
-import logo from '../../images/logo.png';
 
 function Featured({ type }) {
 	return (
@@ -28,7 +27,7 @@ function Featured({ type }) {
 			)}
 			<div className="info">
 				<img
-					src={logo}
+					src="/title.png"
 					alt=""
 				/>
 				<span className="desc">
