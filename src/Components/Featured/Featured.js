@@ -31,9 +31,12 @@ function Featured({ type }) {
 					alt=""
 				/>
 				<span className="desc">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Vitae adipisci repellendus eum quasi illo, velit numquam,
-					maxime tempora sint deleniti, aliquid qui.
+					Welcome to 'Shrimp Game,' a comedic take on a deadly competition
+					where contestants face absurd challenges for a chance at a tantalizing prize.
+					In this quirky series, participants dive into a world of crustacean-themed games
+					that are as hilarious as they are dangerous. Watch as the contestants navigate
+					through shrimpy obstacles, facing off in bizarre challenges
+					that will have you both laughing and on the edge of your seat
 				</span>
 				<div className="buttons">
 					<button className="play">
