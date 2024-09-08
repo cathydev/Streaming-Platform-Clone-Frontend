@@ -1,84 +1,91 @@
 .navbar {
-	width: 100%;
-	color: white;
-	font-size: 14px;
-	position: fixed;
-	top: 0;
-	z-index: 1;
-	background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  border-radius: 5px;
 
-	&.scrolled {
-		background-color: var(--main-color);
-	}
+  &.scrolled {
+    background-color: var(--main-color);
+  }
 
-	.container {
-		padding: 0px 50px;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		height: 70px;
+  .container {
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
 
-		.main-nav {
-			display: flex;
-			align-items: center;
+    .main-nav {
+      display: flex;
+      align-items: center;
 
-			img {
-				height: 25px;
-				margin-right: 40px;
-			}
-		}
+      img {
+        height: 25px;
+        margin-right: 40px;
+      }
 
-		span {
-			margin-right: 20px;
-			cursor: pointer;
+      .nav-list {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+      }
+    }
 
-		}
+    span {
+      margin-right: 20px;
+      cursor: pointer;
+    }
 
-		span:hover{
-			color: #b3b3b3;
-		}
-		
-		.active {
-			font-weight: 600;
-		}
+    span:hover {
+      color: #b3b3b3;
+    }
 
-		.sec-nav {
-			display: flex;
-			align-items: center;
+    .active {
+      font-weight: 600;
+      border-bottom: 2px solid white;
+      padding-bottom: 5px;
+    }
 
-			.icon {
-				margin: 0px 15px;
-				cursor: pointer;
-			}
+    .sec-nav {
+      display: flex;
+      align-items: center;
 
-			img {
-				width: 30px;
-				height: 30px;
-				border-radius: 5px;
-				object-fit: cover;
-				cursor: pointer;
-			}
+      .icon {
+        margin: 0px 15px;
+        cursor: pointer;
+      }
 
-			.profile {
-				.options {
-					display: none;
-					background-color: var(--main-color);
-					border-radius: 5px;
-				}
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        object-fit: cover;
+        cursor: pointer;
+      }
 
-				span {
-					padding: 10px;
-					cursor: pointer;
-				}
+      .profile {
+        .options {
+          display: none;
+          background-color: var(--main-color);
+          border-radius: 5px;
+        }
 
-				&:hover {
-					.options {
-						display: flex;
-						flex-direction: column;
-						position: absolute;
-					}
-				}
-			}
-		}
-	}
+        span {
+          padding: 10px;
+          cursor: pointer;
+        }
+
+        &:hover {
+          .options {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
 }

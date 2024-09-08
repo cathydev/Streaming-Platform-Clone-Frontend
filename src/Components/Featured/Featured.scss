@@ -1,7 +1,7 @@
 .featured {
   height: 100vh;
   position: relative;
-  background: linear-gradient(to left bottom, rgba(0, 0, 0, 0) 0%, #141414 100%),
+  background: linear-gradient(to left bottom, rgba(0, 0, 0, 0) 0%, #141414 70%),
     url("https://images4.alphacoders.com/118/thumb-1920-1181183.jpg");
   background-size: cover;
 
@@ -32,10 +32,11 @@
   }
 
   .info {
-    width: 35%;
+    width: 50%;
     position: absolute;
     left: 50px;
-    top: 125px;
+    top: 50%;
+    transform: translate(0%, -50%);
     color: white;
     display: flex;
     flex-direction: column;
@@ -49,7 +50,7 @@
     display: flex;
 
     button {
-      padding: 10px 20px;
+      padding: 10px 50px;
       border: none;
       border-radius: 5px;
       display: flex;
@@ -61,8 +62,8 @@
       cursor: pointer;
 
       &.play {
-        background-color: white;
-        color: var(--main-color);
+        background-color: var(--main-color);
+        color: #fff;
       }
 
       &.more {

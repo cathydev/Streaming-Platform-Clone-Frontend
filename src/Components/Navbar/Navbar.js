@@ -18,11 +18,13 @@ const Navbar = () => {
 						src="/logo.png"
 						width="125" height="225" alt="logo"
 					/>
-					<span className="active">Home</span>
-					<span>TV Shows</span>
-					<span>Movies</span>
-					<span>New & Popular</span>
-					<span>My List</span>
+					<div className="nav-list">
+						<span className="active">Home</span>
+						<span>TV Shows</span>
+						<span>Movies</span>
+						<span>New & Popular</span>
+						<span>My List</span>
+					</div>
 				</div>
 				<div className="sec-nav">
 					<Search className="icon" />
