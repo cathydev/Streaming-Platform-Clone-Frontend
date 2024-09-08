@@ -51,7 +51,7 @@
 
     .sec-nav {
       display: flex;
-      align-items: center;
+      align-items: end;
 
       .icon {
         margin: 0px 15px;
@@ -67,6 +67,7 @@
       }
 
       .profile {
+		margin: 0 10px;
         .options {
           display: none;
           background-color: var(--main-color);
@@ -88,4 +89,10 @@
       }
     }
   }
+}
+
+@media only screen and (max-width: 768px) {
+	.nav-list {
+		display: none;
+	}
 }

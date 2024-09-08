@@ -31,22 +31,25 @@ function Featured({ type }) {
 					alt=""
 				/>
 				<span className="desc">
-					Welcome to 'Shrimp Game,' a comedic take on a deadly competition
+					Welcome to 'Shrimp Game' a comedic take on a deadly competition
 					where contestants face absurd challenges for a chance at a tantalizing prize.
 					In this quirky series, participants dive into a world of crustacean-themed games
 					that are as hilarious as they are dangerous. Watch as the contestants navigate
-					through shrimpy obstacles, facing off in bizarre challenges
-					that will have you both laughing and on the edge of your seat
+					through shrimpy obstacles, facing off in bizarre challenges.
+				</span>
+				<span className="show_info">
+					<InfoOutlined fontSize="small" />
+					This marvelous show was nominated for 0 Emmys
 				</span>
 				<div className="buttons">
 					<button className="play">
 						<PlayArrow />
 						<span>Play</span>
 					</button>
-					<button className="more">
+					{/* 					<button className="more">
 						<InfoOutlined />
 						<span>More info</span>
-					</button>
+					</button> */}
 				</div>
 			</div>
 		</div>
