@@ -1,16 +1,17 @@
 import { useState } from "react";
 import SearchIcon from '@mui/icons-material/Search';
-import { styled, alpha } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import "./Navbar.scss";
 
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
+	color: '#000',
 	borderRadius: theme.shape.borderRadius,
-	backgroundColor: alpha(theme.palette.common.white, 0.15),
+	backgroundColor: 'rgb(255 255 255 / 49%)',
 	'&:hover': {
-		backgroundColor: alpha(theme.palette.common.white, 0.25),
+		backgroundColor: 'rgb(255 255 255 / 49%)',
 	},
 	marginLeft: 0,
 	width: '100%',

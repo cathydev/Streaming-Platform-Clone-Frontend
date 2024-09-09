@@ -64,7 +64,7 @@
       justify-content: center;
       font-size: 18px;
       font-weight: 500;
-      margin: 10px 0;
+      margin: 10px 10px 0 0;
       cursor: pointer;
 
       &.play {
@@ -73,7 +73,7 @@
       }
 
       &.more {
-        background-color: rgba(109, 109, 110, 0.7);
+        background-color: #000;
         color: white;
       }
 

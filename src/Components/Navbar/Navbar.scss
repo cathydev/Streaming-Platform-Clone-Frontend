@@ -4,7 +4,7 @@
   font-size: 14px;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   border-radius: 5px;
 
   &.scrolled {
@@ -61,7 +61,7 @@
       img {
         width: 30px;
         height: 30px;
-        border-radius: 5px;
+        border-radius: 50%;
         object-fit: cover;
         cursor: pointer;
       }
