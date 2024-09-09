@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { popularMovies, popularShows, movies } from "../../utils/utils";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -61,6 +61,9 @@ function List() {
 							slideShadows: true
 						}}
 						loop={true}
+						autoplay={{
+							delay: 5000
+						}}
 						hashNavigation={{
 							watchState: true,
 						}}
@@ -79,7 +82,7 @@ function List() {
 						}}
 						onSwiper={setSwiperRef}
 						centeredSlides={true}
-						modules={[EffectCoverflow, Pagination]}
+						modules={[EffectCoverflow, Pagination, Autoplay]}
 						className="mySuperSwiper"
 					>
 						{movies.map((item, index) => (

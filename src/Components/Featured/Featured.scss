@@ -56,9 +56,10 @@
 
   .buttons {
     display: flex;
+    flex-direction: column;
 
     button {
-      padding: 10px 50px;
+      padding: 10px 20px;
       border: none;
       border-radius: 25px;
       display: flex;
@@ -90,6 +91,18 @@
   .featured {
     .show_info {
       flex-direction: row;
+    }
+
+    .desc {
+      margin: 0px 0 40px;
+    }
+
+    .buttons {
+      flex-direction: row;
+  
+      button {
+        padding: 10px 50px;
+      }
     }
   }
 }
