@@ -51,14 +51,15 @@
 main {
   padding: 30px;
   display: flex;
-  height: 70vh;
+  flex-direction: column;
+  height: 90vh;
   align-items: center;
 
   h1 {
     text-transform: capitalize;
     letter-spacing: 0.8px;
     font-weight: 900;
-    font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+    font-size: xx-large;
     background-color: #005baa38;
     background-image: linear-gradient(45deg, #a7c7e3, #492f2f);
     background-size: 100%;
@@ -76,18 +77,38 @@ main {
   }
 
   .superfab {
-	height: 450px;
-	width: 320px;
-	background-color: #453434;
+    height: 250px;
+    background-color: #453434;
   }
 
   .movies {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
   }
 
   .swiper-3d .swiper-slide-shadow-left,
   .swiper-3d .swiper-slide-shadow-right {
     background-image: none;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  main {
+    flex-direction: row;
+    height: 70vh;
+
+    h1 {
+      font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+    }
+
+    .movies {
+      width: 50%;
+    }
+
+    .superfab {
+      height: 450px;
+      width: 320px;
+      background-color: #453434;
+    }
   }
 }

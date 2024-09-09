@@ -21,7 +21,13 @@ function List() {
 					slidesPerView={3}
 					breakpoints={{
 						768: {
+							slidesPerView: 5,
+						},
+						1024: {
 							slidesPerView: 9,
+						},
+						1560: {
+							slidesPerView: 10
 						},
 					}}
 					centeredSlides={true}
@@ -62,22 +68,14 @@ function List() {
 							clickable: true,
 						}}
 						navigation={false}
-						slidesPerView={2}
+						slidesPerView={1}
 						breakpoints={{
-							breakpoints: {
-								640: {
-									slidesPerView: 2
-								},
-								768: {
-									slidesPerView: 1
-								},
-								1024: {
-									slidesPerView: 2
-								},
-								1560: {
-									slidesPerView: 3
-								}
-							}
+							1024: {
+								slidesPerView: 2
+							},
+							1560: {
+								slidesPerView: 3
+							},
 						}}
 						onSwiper={setSwiperRef}
 						centeredSlides={true}
@@ -101,7 +99,13 @@ function List() {
 					slidesPerView={3}
 					breakpoints={{
 						768: {
+							slidesPerView: 5,
+						},
+						1024: {
 							slidesPerView: 9,
+						},
+						1560: {
+							slidesPerView: 10
 						},
 					}}
 					centeredSlides={true}
