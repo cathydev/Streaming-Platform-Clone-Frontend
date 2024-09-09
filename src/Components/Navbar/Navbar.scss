@@ -12,7 +12,7 @@
   }
 
   .container {
-    padding: 0px 50px;
+    padding: 0px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,6 +28,7 @@
       }
 
       .nav-list {
+        display: none;
         position: absolute;
         left: 50%;
         transform: translate(-50%, 0%);
@@ -67,7 +68,7 @@
       }
 
       .profile {
-		margin: 0 10px;
+        margin: 0 10px;
         .options {
           display: none;
           background-color: var(--main-color);
@@ -91,8 +92,16 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
-	.nav-list {
-		display: none;
-	}
+@media only screen and (min-width: 768px) {
+  .navbar {
+    .container {
+      padding: 0px 50px;
+
+      .main-nav {
+        .nav-list {
+          display: block;
+        }
+      }
+    }
+  }
 }

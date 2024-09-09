@@ -47,7 +47,7 @@ function List() {
 			<main>
 				<div>
 					<h1>Watch the best classic movies</h1>
-					<p>Beauty and mystery are hidden under the sea. Explore with our application to know about Aquatic Animals.</p>
+					<p>Step into the golden age of cinema with our collection of timeless classics.</p>
 				</div>
 				<div className="movies">
 					<Swiper
