@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { popularMovies, popularShows, movies } from "../../utils/utils";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
+import { supabase } from '../../utils/supabase';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,6 +11,29 @@ import "./List.scss";
 
 function List() {
 	const [setSwiperRef] = useState(null);
+	const [popularMovies, setPopularMovies] = useState([]);
+	const [movies, setMovies] = useState([]);
+	const [popularShows, setPopularShows] = useState([]);
+
+	useEffect(() => {
+		async function fetchData() {
+			try {
+				const [moviesResponse, popularShowsResponse, popularMoviesResponse] = await Promise.all([
+					supabase.from("movies").select(),
+					supabase.from("popular-shows").select(),
+					supabase.from("popular-movies").select(),
+				]);
+				
+				setMovies(moviesResponse.data);
+				setPopularShows(popularShowsResponse.data);
+				setPopularMovies(popularMoviesResponse.data);
+			} catch (error) {
+				console.error(error);
+			}
+		}
+
+		fetchData();
+	}, []);
 
 	return (
 		<>
@@ -37,7 +60,7 @@ function List() {
 					loop={true}
 					className="mySwiper"
 				>
-					{popularMovies.map((item, index) => (
+					{popularMovies?.map((item, index) => (
 						<SwiperSlide>
 							<div className="list_item"></div>
 						</SwiperSlide>
@@ -85,7 +108,7 @@ function List() {
 						modules={[EffectCoverflow, Pagination, Autoplay]}
 						className="mySuperSwiper"
 					>
-						{movies.map((item, index) => (
+						{movies?.map((item, index) => (
 							<SwiperSlide>
 								<div className="superfab">
 									<h2>{item.title}</h2>
@@ -118,7 +141,7 @@ function List() {
 					loop={true}
 					className="mySwiper"
 				>
-					{popularShows.map((item, index) => (
+					{popularShows?.map((item, index) => (
 						<SwiperSlide>
 							<div className="list_item"></div>
 						</SwiperSlide>
