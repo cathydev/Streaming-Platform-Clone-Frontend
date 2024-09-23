@@ -23,7 +23,7 @@ function List() {
 					supabase.from("popular-shows").select(),
 					supabase.from("popular-movies").select(),
 				]);
-				
+
 				setMovies(moviesResponse.data);
 				setPopularShows(popularShowsResponse.data);
 				setPopularMovies(popularMoviesResponse.data);
@@ -60,9 +60,17 @@ function List() {
 					loop={true}
 					className="mySwiper"
 				>
-					{popularMovies?.map((item, index) => (
-						<SwiperSlide>
-							<div className="list_item"></div>
+					{popularMovies?.map((item) => (
+						<SwiperSlide key={item.id}>
+							<div
+								className="list_item"
+								style={{
+									backgroundImage: `url(${item.image})`,
+									backgroundSize: 'cover',
+									backgroundPosition: 'center',
+								}}>
+								<h6>{item.title}</h6>
+							</div>
 						</SwiperSlide>
 					))}
 				</Swiper>
@@ -108,9 +116,15 @@ function List() {
 						modules={[EffectCoverflow, Pagination, Autoplay]}
 						className="mySuperSwiper"
 					>
-						{movies?.map((item, index) => (
-							<SwiperSlide>
-								<div className="superfab">
+						{movies?.map((item) => (
+							<SwiperSlide key={item.id}>
+								<div
+									className="superfab"
+									style={{
+										backgroundImage: `url(${item.image})`,
+										backgroundSize: 'cover',
+										backgroundPosition: 'center',
+									}}>
 									<h2>{item.title}</h2>
 								</div>
 							</SwiperSlide>
@@ -141,9 +155,17 @@ function List() {
 					loop={true}
 					className="mySwiper"
 				>
-					{popularShows?.map((item, index) => (
-						<SwiperSlide>
-							<div className="list_item"></div>
+					{popularShows?.map((item) => (
+						<SwiperSlide key={item.id}>
+							<div
+								className="list_item"
+								style={{
+									backgroundImage: `url(${item.image})`,
+									backgroundSize: 'cover',
+									backgroundPosition: 'center',
+								}}>
+								<h6>{item.title}</h6>
+							</div>
 						</SwiperSlide>
 					))}
 				</Swiper>
