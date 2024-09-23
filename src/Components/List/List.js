@@ -39,136 +39,142 @@ function List() {
 		<>
 			<div className="list">
 				<div className="listTitle">Popular Now</div>
-				<Swiper
-					onSwiper={setSwiperRef}
-					slidesPerView={3}
-					breakpoints={{
-						768: {
-							slidesPerView: 5,
-						},
-						1024: {
-							slidesPerView: 9,
-						},
-						1560: {
-							slidesPerView: 10
-						},
-					}}
-					centeredSlides={true}
-					spaceBetween={30}
-					navigation={true}
-					modules={[Pagination, Navigation]}
-					loop={true}
-					className="mySwiper"
-				>
-					{popularMovies?.map((item) => (
-						<SwiperSlide key={item.id}>
-							<div
-								className="list_item"
-								style={{
-									backgroundImage: `url(${item.image})`,
-									backgroundSize: 'cover',
-									backgroundPosition: 'center',
-								}}>
-								<h6>{item.title}</h6>
-							</div>
-						</SwiperSlide>
-					))}
-				</Swiper>
+				{popularMovies.length > 0 &&
+					<Swiper
+						onSwiper={setSwiperRef}
+						slidesPerView={3}
+						breakpoints={{
+							768: {
+								slidesPerView: 5,
+							},
+							1024: {
+								slidesPerView: 9,
+							},
+							1560: {
+								slidesPerView: 10
+							},
+						}}
+						centeredSlides={true}
+						spaceBetween={30}
+						navigation={true}
+						modules={[Pagination, Navigation]}
+						loop={true}
+						className="mySwiper"
+					>
+						{popularMovies?.map((item) => (
+							<SwiperSlide key={item.id}>
+								<div
+									className="list_item"
+									style={{
+										backgroundImage: `url(${item.image})`,
+										backgroundSize: 'cover',
+										backgroundPosition: 'center',
+									}}>
+									<h6>{item.title}</h6>
+								</div>
+							</SwiperSlide>
+						))}
+					</Swiper>
+				}
 			</div>
 			<main>
 				<div>
 					<h1>Watch the best classic movies</h1>
 					<p>Step into the golden age of cinema with our collection of timeless classics.</p>
 				</div>
-				<div className="movies">
+				{movies.length > 0 &&
+					<div className="movies">
+						<Swiper
+							effect="coverflow"
+							grabCursor={true}
+							coverflowEffect={{
+								rotate: 0,
+								stretch: 0,
+								depth: 100,
+								modifier: 3,
+								slideShadows: true
+							}}
+							loop={true}
+							autoplay={{
+								delay: 5000
+							}}
+							hashNavigation={{
+								watchState: true,
+							}}
+							pagination={{
+								clickable: true,
+							}}
+							navigation={false}
+							slidesPerView={1}
+							breakpoints={{
+								1024: {
+									slidesPerView: 2
+								},
+								1560: {
+									slidesPerView: 3
+								},
+							}}
+							onSwiper={setSwiperRef}
+							centeredSlides={true}
+							modules={[EffectCoverflow, Pagination, Autoplay]}
+							className="mySuperSwiper"
+						>
+							{movies?.map((item) => (
+								<SwiperSlide key={item.id}>
+									<div
+										className="superfab"
+										style={{
+											backgroundImage: `url(${item.image})`,
+											backgroundSize: 'cover',
+											backgroundPosition: 'center',
+										}}>
+										<h2>{item.title}</h2>
+									</div>
+								</SwiperSlide>
+							))}
+						</Swiper>
+					</div>
+				}
+			</main>
+			<div className="list">
+				<div className="listTitle">Popular Shows</div>
+				{popularShows.length > 0 &&
 					<Swiper
-						effect="coverflow"
-						grabCursor={true}
-						coverflowEffect={{
-							rotate: 0,
-							stretch: 0,
-							depth: 100,
-							modifier: 3,
-							slideShadows: true
-						}}
-						loop={true}
-						autoplay={{
-							delay: 5000
-						}}
-						hashNavigation={{
-							watchState: true,
-						}}
-						pagination={{
-							clickable: true,
-						}}
-						navigation={false}
-						slidesPerView={1}
+						onSwiper={setSwiperRef}
+						slidesPerView={3}
 						breakpoints={{
+							768: {
+								slidesPerView: 5,
+							},
 							1024: {
-								slidesPerView: 2
+								slidesPerView: 9,
 							},
 							1560: {
-								slidesPerView: 3
+								slidesPerView: 10
 							},
 						}}
-						onSwiper={setSwiperRef}
 						centeredSlides={true}
-						modules={[EffectCoverflow, Pagination, Autoplay]}
-						className="mySuperSwiper"
+						spaceBetween={30}
+						navigation={true}
+						modules={[Pagination, Navigation]}
+						loop={true}
+						className="mySwiper"
 					>
-						{movies?.map((item) => (
+						{popularShows?.map((item) => (
 							<SwiperSlide key={item.id}>
 								<div
-									className="superfab"
+									className="list_item"
 									style={{
 										backgroundImage: `url(${item.image})`,
 										backgroundSize: 'cover',
 										backgroundPosition: 'center',
 									}}>
-									<h2>{item.title}</h2>
+									<h6>{item.title}</h6>
 								</div>
 							</SwiperSlide>
 						))}
 					</Swiper>
-				</div>
-			</main>
-			<div className="list">
-				<div className="listTitle">Popular Shows</div>
-				<Swiper
-					onSwiper={setSwiperRef}
-					slidesPerView={3}
-					breakpoints={{
-						768: {
-							slidesPerView: 5,
-						},
-						1024: {
-							slidesPerView: 9,
-						},
-						1560: {
-							slidesPerView: 10
-						},
-					}}
-					centeredSlides={true}
-					spaceBetween={30}
-					navigation={true}
-					modules={[Pagination, Navigation]}
-					loop={true}
-					className="mySwiper"
-				>
-					{popularShows?.map((item) => (
-						<SwiperSlide key={item.id}>
-							<div
-								className="list_item"
-								style={{
-									backgroundImage: `url(${item.image})`,
-									backgroundSize: 'cover',
-									backgroundPosition: 'center',
-								}}>
-								<h6>{item.title}</h6>
-							</div>
-						</SwiperSlide>
-					))}
-				</Swiper>
+				}
 			</div>
 		</>
 	);
