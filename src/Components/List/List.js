@@ -70,7 +70,7 @@ function List() {
 										backgroundSize: 'cover',
 										backgroundPosition: 'center',
 									}}>
-									<h6>{item.title}</h6>
+									<span>{item.title}</span>
 								</div>
 							</SwiperSlide>
 						))}
@@ -128,7 +128,7 @@ function List() {
 											backgroundSize: 'cover',
 											backgroundPosition: 'center',
 										}}>
-										<h2>{item.title}</h2>
+										<span>{item.title}</span>
 									</div>
 								</SwiperSlide>
 							))}
@@ -169,7 +169,7 @@ function List() {
 										backgroundSize: 'cover',
 										backgroundPosition: 'center',
 									}}>
-									<h6>{item.title}</h6>
+									<span>{item.title}</span>
 								</div>
 							</SwiperSlide>
 						))}
