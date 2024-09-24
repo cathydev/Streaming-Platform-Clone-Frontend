@@ -48,6 +48,9 @@ function List() {
 								slidesPerView: 5,
 							},
 							1024: {
+								slidesPerView: 8,
+							},
+							1200: {
 								slidesPerView: 9,
 							},
 							1560: {
@@ -147,6 +150,9 @@ function List() {
 								slidesPerView: 5,
 							},
 							1024: {
+								slidesPerView: 8,
+							},
+							1200: {
 								slidesPerView: 9,
 							},
 							1560: {

@@ -103,15 +103,6 @@ main {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .list,
-  .movies {
-    .list_item {
-      width: 120px;
-    }
-  }
-}
-
 @media only screen and (min-width: 1023px) {
   main {
     flex-direction: row;
@@ -127,6 +118,12 @@ main {
 
     .superfab {
       width: 320px;
+    }
+  }
+  .list,
+  .movies {
+    .list_item {
+      width: 130px;
     }
   }
 }
