@@ -10,7 +10,7 @@ import "./Slider.scss";
 
 export default function Slider({ onChange }) {
   const [setSwiperRef] = useState(null);
-  const [popularMovies, setPopularMovies] = useState([]);
+  const [shows, setShows] = useState([]);
   const [indexNumber, setIndexNumber] = useState();
 
   const handleSlideChange = (swiper) => {
@@ -21,10 +21,10 @@ export default function Slider({ onChange }) {
   useEffect(() => {
     async function fetchData() {
       try {
-        const [popularMoviesResponse] = await Promise.all([
-          supabase.from("popular-movies").select(),
+        const [showsResponse] = await Promise.all([
+          supabase.from("shows").select(),
         ]);
-        setPopularMovies(popularMoviesResponse.data);
+        setShows(showsResponse.data);
       } catch (error) {
         console.error(error);
       }
@@ -32,30 +32,35 @@ export default function Slider({ onChange }) {
 
     fetchData();
   }, []);
+   console.log(shows)
 
   useEffect(() => {
-    if (typeof indexNumber === "number" && popularMovies.length > 0) {
+    if (typeof indexNumber === "number" && shows.length > 0) {
+      const currentIndex = indexNumber === 0 ? 0 : indexNumber - 1;
+      console.log(currentIndex)
       onChange({
-        image: popularMovies[indexNumber - 1].image,
-        index: indexNumber - 1,
+        image: shows[indexNumber].image,
+        title: shows[indexNumber].title,
+        description: shows[indexNumber].description,
+        awards: shows[indexNumber].awards,
+        index: indexNumber,
       });
     }
-  }, [popularMovies, indexNumber]);
+  }, [shows, indexNumber]);
 
   return (
     <div className="container2">
       <div className="list2">
-        {popularMovies.length > 0 && (
+        {shows.length > 0 && (
           <Swiper
             onSwiper={setSwiperRef}
             centeredSlides={false}
             slidesPerView={1}
             grabCursor={true}
-            freeMode={false}
-            loop={true}
             mousewheel={false}
             keyboard={{ enabled: true }}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            autoplay={{ delay: 3000}}
+            loop={true}
             pagination={{
               el: ".swiper-pagination",
               dynamicBullets: false,
@@ -71,7 +76,7 @@ export default function Slider({ onChange }) {
                 spaceBetween: 20,
               },
               1024: {
-                slidesPerView: 3,
+                slidesPerView: 2.5,
                 spaceBetween: 20,
               },
             }}
@@ -79,10 +84,10 @@ export default function Slider({ onChange }) {
             initialSlide={1}
             onSlideChange={handleSlideChange}
           >
-            {popularMovies?.map((item) => (
+            {shows?.map((item) => (
               <SwiperSlide key={item.id}>
                 <div className="superfab">
-                  <img src={item.image} />
+                  <img src={item.image}/>
                   <span>{item.title}</span>
                 </div>
               </SwiperSlide>
