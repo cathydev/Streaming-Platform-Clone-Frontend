@@ -64,7 +64,7 @@
   .buttons {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
 
     button {
       padding: 10px 20px;
@@ -103,6 +103,7 @@
 
     .buttons {
       flex-direction: row;
+      width: 50%;
 
       button {
         padding: 10px 50px;

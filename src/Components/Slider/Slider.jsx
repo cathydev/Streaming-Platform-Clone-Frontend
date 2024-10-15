@@ -49,8 +49,8 @@ export default function Slider({ onChange }) {
   }, [shows, indexNumber]);
 
   return (
-    <div className="container2">
-      <div className="list2">
+    <div className="featured-container">
+      <div className="show-list">
         {shows.length > 0 && (
           <Swiper
             onSwiper={setSwiperRef}

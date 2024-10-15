@@ -30,7 +30,7 @@ function Featured() {
           <span className="desc">{currentMovie.description}</span>
           <span className="show_info">
             <InfoOutlined fontSize="small" />
-            This marvelous show was nominated for {currentMovie.awards} Emmys
+            This show was nominated for {currentMovie.awards} Emmys
           </span>
           <div className="buttons">
             <button className="play">

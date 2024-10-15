@@ -21,7 +21,7 @@
     "web-vitals": "^4.2.3"
   },
   "scripts": {
-    "start": "vite",
+    "start": "vite --port 3000",
     "build": "vite build",
     "serve": "vite preview"
   },
