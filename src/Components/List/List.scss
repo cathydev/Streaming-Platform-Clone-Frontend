@@ -127,3 +127,24 @@ main {
     }
   }
 }
+
+@media only screen and (min-width: 1536px) {
+  main {
+    h1 {
+      font-size: 7rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  .list {
+    .listTitle {
+      font-size: 2rem;
+    }
+    .list_item {
+      width: 165px;
+      height: 220px;
+    }
+  }
+}

@@ -111,3 +111,16 @@
     }
   }
 }
+
+@media only screen and (min-width: 1536px) {
+  .myContainer {
+    .info {
+      .title {
+        font-size: 8rem;
+      }
+      .desc, .show_info, .play {
+        font-size: 2rem;
+      }
+    }
+  }
+}

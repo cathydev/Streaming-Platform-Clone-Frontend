@@ -79,6 +79,10 @@ export default function Slider({ onChange }) {
                 slidesPerView: 2.5,
                 spaceBetween: 20,
               },
+              1560: {
+                slidesPerView: 3.1,
+                spaceBetween: 20,
+              },
             }}
             className="superfab"
             initialSlide={1}
