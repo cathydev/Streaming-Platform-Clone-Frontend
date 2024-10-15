@@ -1,10 +1,12 @@
-.featured {
+.myContainer {
   height: 100vh;
   position: relative;
-  background: linear-gradient(to left bottom, rgba(0, 0, 0, 0) 0%, #141414 70%),
-    url("https://images.pexels.com/photos/4763271/pexels-photo-4763271.jpeg");
-  background-size: cover;
-  background-position: center;
+
+  .featured {
+    position: absolute;
+    filter: blur(5px);
+    object-fit: cover;
+  }
 
   .category {
     position: absolute;
@@ -29,7 +31,6 @@
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
   }
 
   .info {
@@ -99,7 +100,7 @@
 
     .buttons {
       flex-direction: row;
-  
+
       button {
         padding: 10px 50px;
       }
